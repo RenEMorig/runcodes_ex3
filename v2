@@ -1,0 +1,35 @@
+
+
+#include <stdio.h>
+
+float calc_imc(float peso, float altura) {
+    return peso/(altura*altura);
+}
+
+void comp_imc(float i1, float i2) {
+    if(i1 > i2) {
+        printf("%d", 1);
+    }
+    if(i1 < i2) {
+        printf("%d", 2);
+    }
+    if(i1 == i2) {
+        printf("%d", 0);
+    }
+}
+
+
+int main() {
+
+    float p1, p2, h1, h2, imc1, imc2;
+    scanf("%f %f\n%f %f", &p1, &h1, &p2, &h2);
+/*     scanf("%f %f\n", &p1, &h1);
+    scanf("%f %f", &p2, &h2); */
+
+    imc1 = calc_imc(p1, h1);
+    imc2 = calc_imc(p2, h2);
+
+    comp_imc(imc1, imc2);
+
+    return 0;
+}
